@@ -6,11 +6,13 @@
   <meta charset="UTF-8">
   <title>Lista de Tarefas</title>
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
 <div class="container">
-  <h1>🗒️ Lista de Tarefas</h1>
+  <h1><ion-icon name="list-circle-outline"></ion-icon> Lista de Tarefas</h1>
 
   <form action="adicionar.php" method="POST">
     <input type="text" name="titulo" placeholder="Digite uma tarefa..." required>
@@ -25,7 +27,7 @@
     if ($result->num_rows > 0) {
         while ($linha = $result->fetch_assoc()) {
             echo "<li>" . htmlspecialchars($linha['titulo']) . 
-                 " <a href='deletar.php?id=" . $linha['id'] . "'>❌</a></li>";
+                 " <a href='deletar.php?id=" . $linha['id'] . "'><ion-icon name='trash-outline'></ion-icon></a></li>";
         }
     } else {
         echo "<p>Nenhuma tarefa ainda.</p>";
