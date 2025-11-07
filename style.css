@@ -9,10 +9,30 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #f0f2f5;
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Agora o header fica acima do main */
   align-items: center;
   height: 100vh;
-  margin: 0;
+}
+
+/* Título do topo */
+header {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0 20px 0;
+}
+
+header h1 {
+  font-size: 1.6em;
+  color: #ffffff;
+}
+
+/* Container central */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .container {
@@ -23,14 +43,14 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-h1 {
+.container h1 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
   font-size: 1.6em;
 }
 
-h1 ion-icon {
+.container h1 ion-icon {
   color: #007bff;
   font-size: 2.0em;
   vertical-align: middle;
@@ -49,8 +69,6 @@ input[type="text"] {
   border-radius: 5px;
   font-size: 14px;
 }
-
-
 
 button {
   background: #007bff;
@@ -91,4 +109,32 @@ a {
 
 a:hover {
   color: #d60000;
+}
+
+.link-abaixo {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.link-abaixo a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.link-abaixo a:hover {
+  text-decoration: underline;
+  color: #005fc1;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('img/pinheiros.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
