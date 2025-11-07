@@ -10,6 +10,9 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+<div>
+  <h1>Bem vindo ao site que você irá gerenciar a tua rotina!</h1>
+</div>
 
 <div class="container">
   <h1><ion-icon name="list-circle-outline"></ion-icon> Lista de Tarefas</h1>
