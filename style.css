@@ -2,16 +2,31 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: 0.2s linear;
+   transition: 0.2s linear;  
 }
 
 body {
+  --bg-image: url('img/pinheiros.jpg');
+  --card-bg: #ffffff;
+  --page-bg: #f0f2f5;
+  --accent: #007bff;
+  --accent-dark: #005fc1;
+  --danger: #ff4d4d;
+  --muted: #f8f9fa;
+
   font-family: 'Segoe UI', sans-serif;
-  background: #f0f2f5;
+  background: var(--page-bg);
   display: flex;
-  flex-direction: column; /* Agora o header fica acima do main */
+  flex-direction: column; /* header above main */
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  color: #333;
+  /* decorative full-viewport background image */
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* Título do topo */
@@ -36,11 +51,11 @@ main {
 }
 
 .container {
-  background: #fff;
+  background: var(--card-bg);
   width: 380px;
-  padding: 20px 25px;
+  padding: 20px 24px;
   border-radius: 24px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .container h1 {
@@ -65,24 +80,26 @@ form {
 input[type="text"] {
   flex: 1;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 6px;
   font-size: 14px;
+  padding-left: 10px;
 }
 
 button {
-  background: #007bff;
+  background: var(--accent);
   color: white;
   border: none;
   padding: 8px 12px;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,123,255,0.12);
 }
 
 button:hover {
-  background: #005fc1;
-  font-size: 1.2em;
+  background: var(--accent-dark);
+  transform: translateY(-1px) scale(1.02);
 }
 
 ul {
@@ -92,17 +109,17 @@ ul {
 }
 
 li {
-  background: #f8f9fa;
-  padding: 8px 10px;
-  border-radius: 5px;
-  margin-bottom: 8px;
+  background: var(--muted);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 a {
-  color: #ff4d4d;
+  color: var(--danger);
   text-decoration: none;
   font-size: 16px;
 }
@@ -117,7 +134,7 @@ a:hover {
 }
 
 .link-abaixo a {
-  color: #007bff;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
   font-size: 1em;
@@ -129,12 +146,6 @@ a:hover {
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: url('img/pinheiros.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  /* fallback background if variables are not supported */
+  background-image: url('img/pinheiros.jpg');
 }
