@@ -44,5 +44,6 @@
       </ul>
     </div>
   </main>
+  <footer> Todos direitos reservados 2025 </footer>
 </body>
 </html>
