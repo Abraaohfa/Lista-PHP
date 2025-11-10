@@ -132,6 +132,9 @@ a:hover {
 
 .link-abaixo a {
   color: var(--accent);
+  background: #FFF;
+  border-radius: 24px;
+  padding: 15px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1em;
@@ -139,7 +142,11 @@ a:hover {
 
 .link-abaixo a:hover {
   text-decoration: underline;
-  color: #005fc1;
+  color: #FFF;
+  background: var(--accent-dark);
+  font-size: 1.5em;
+  border-radius: 24px;
+  padding: 15px;
 }
 
 body {
