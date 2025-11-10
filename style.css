@@ -17,11 +17,10 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--page-bg);
   display: flex;
-  flex-direction: column; /* header above main */
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
   color: #333;
-  /* decorative full-viewport background image */
   background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-position: center center;
@@ -29,7 +28,6 @@ body {
   background-size: cover;
 }
 
-/* Título do topo */
 header {
   width: 100%;
   text-align: center;
@@ -41,7 +39,6 @@ header h1 {
   color: #ffffff;
 }
 
-/* Container central */
 main {
   flex: 1;
   display: flex;
@@ -146,6 +143,5 @@ a:hover {
 }
 
 body {
-  /* fallback background if variables are not supported */
   background-image: url('img/pinheiros.jpg');
 }
